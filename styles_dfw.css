@@ -33,12 +33,21 @@
         .nav-menu.active {
             pointer-events: auto;
         }
-        .hamburger {
-            position: fixed;
-            top: 24px;
-            right: 40px;
-            z-index: 10000 !important;
-        }
+    .hamburger {
+        position: fixed;
+        top: 24px;
+        right: 40px;
+        z-index: 10000 !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 44px;
+        height: 44px;
+        cursor: pointer;
+        background: none !important;
+        box-shadow: none !important;
+    }
     .feature,
     .detail-card,
     .testimonial,
@@ -130,19 +139,6 @@
         padding: 0;
         text-align: center;
     }
-    .hamburger {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 44px;
-        height: 44px;
-        cursor: pointer;
-        position: absolute;
-        top: 24px;
-        right: 24px;
-        z-index: 2100;
-    }
     .hamburger span {
         display: block;
         height: 4px;
@@ -155,20 +151,6 @@
         right: 0;
         top: 0;
         transform-origin: center;
-    }
-    .hamburger {
-        /* ...existing code... */
-        position: fixed;
-        top: 24px;
-        right: 40px;
-        z-index: 10000 !important;
-        background: none !important;
-        box-shadow: none !important;
-        width: 44px;
-        height: 44px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
     .hamburger span:nth-child(1) {
         top: 8px;
@@ -196,7 +178,6 @@
 }
 /* CSS Color Variables */
 :root {
-    --iron-grey: #3F4D52ff;
     --black: #000000ff;
     --cool-steel-2: #A3B6BCff;
     --accent: #fcb900;
@@ -739,7 +720,7 @@ footer {
 }
 
 footer p {
-    color: var(--iron-grey);
+    color: #3F4D52ff;
 }
 
 /* Citations */
