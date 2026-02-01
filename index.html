@@ -15,9 +15,7 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <a id="link-50-12" class="ct-link logo" href="https://fearlessmasculinity.com" target="_blank" rel="noopener">
-                <img id="fearless_logo" alt="logo" src="logos/fearless.png" class="ct-image logo-img" srcset="" sizes="(max-width: 1px) 100vw, 1px">
-            </a>
+            <!-- Fearless logo removed -->
             <ul class="nav-menu">
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#retreat" class="nav-link">Retreat</a></li>
@@ -214,6 +212,40 @@
     </footer>
 
     <script>
+                // Hamburger menu for mobile
+                const hamburger = document.querySelector('.hamburger');
+                const navMenu = document.querySelector('.nav-menu');
+                let lastScrollY = window.scrollY;
+
+                function toggleMenu() {
+                    hamburger.classList.toggle('active');
+                    navMenu.classList.toggle('active');
+                }
+                if (hamburger) {
+                    hamburger.addEventListener('click', toggleMenu);
+                }
+
+                // Auto-hide nav menu on scroll (mobile only)
+                window.addEventListener('scroll', function() {
+                    if (window.innerWidth <= 900) {
+                        if (window.scrollY > lastScrollY && navMenu.classList.contains('active')) {
+                            // Scrolling down, hide menu
+                            navMenu.classList.remove('active');
+                            hamburger.classList.remove('active');
+                        }
+                        lastScrollY = window.scrollY;
+                    }
+                });
+
+                // Close menu when clicking a nav link (mobile)
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.addEventListener('click', () => {
+                        if (window.innerWidth <= 900) {
+                            hamburger.classList.remove('active');
+                            navMenu.classList.remove('active');
+                        }
+                    });
+                });
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
