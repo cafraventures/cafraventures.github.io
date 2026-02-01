@@ -1,3 +1,28 @@
+/* Ensure nav logo matches nav link size */
+.nav-menu img {
+    height: 32px;
+    width: auto;
+    vertical-align: middle;
+    display: inline-block;
+    margin: 0 0.5rem;
+    object-fit: contain;
+}
+
+@media (max-width: 1024px) {
+    .nav-menu img {
+        height: 2rem;
+        width: auto;
+        margin: 0 auto;
+        display: block;
+        object-fit: contain;
+    }
+    .nav-menu li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+    }
+}
 html, body {
     background: linear-gradient(135deg, var(--deep-navy) 0%, var(--soft-silver) 100%) !important;
     min-height: 100vh !important;
