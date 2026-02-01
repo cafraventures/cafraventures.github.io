@@ -223,13 +223,19 @@
                         block: 'start'
                     });
                 }
+                // Close nav menu after clicking a link (mobile/tablet)
+                if (window.innerWidth <= 1024) {
+                    navMenu.classList.remove('active');
+                    hamburger.classList.remove('active');
+                }
             });
         });
 
         // Hamburger menu toggle for mobile/tablet
         const hamburger = document.getElementById('hamburger');
         const navMenu = document.getElementById('navMenu');
-        hamburger.addEventListener('click', function () {
+        hamburger.addEventListener('click', function (e) {
+            e.stopPropagation();
             hamburger.classList.toggle('active');
             navMenu.classList.toggle('active');
         });

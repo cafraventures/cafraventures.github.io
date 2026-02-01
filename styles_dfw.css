@@ -1,5 +1,15 @@
 /* Tablet and Mobile Responsive Layouts */
 @media (max-width: 1024px) {
+        /* Overlay to ensure hamburger is always clickable */
+        .nav-menu.active {
+            pointer-events: auto;
+        }
+        .hamburger {
+            position: fixed;
+            top: 24px;
+            right: 40px;
+            z-index: 10000 !important;
+        }
     .feature,
     .detail-card,
     .testimonial,
@@ -42,18 +52,21 @@
         top: 0;
         left: 0;
         width: 100vw;
+        height: 100vh;
         max-width: 100vw;
-        height: auto;
+        min-height: 100vh;
         display: flex !important;
         flex-direction: column !important;
-        justify-content: flex-start;
-        align-items: stretch !important;
-        background: #000;
+        justify-content: center !important;
+        align-items: center !important;
+        background: rgba(0,0,0,0.85);
         color: #fff;
         box-shadow: 0 4px 24px rgba(0,0,0,0.18);
-        padding: 4.5rem 2rem 2rem 2rem;
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        padding: 0;
         gap: 0;
-        z-index: 2000;
+        z-index: 9999 !important;
         transform: translateY(-100%);
         opacity: 0;
         pointer-events: none;
@@ -66,24 +79,27 @@
     }
     .nav-menu li {
         display: flex !important;
+        flex-direction: row !important;
         align-items: center;
-        width: 100%;
+        justify-content: center;
+        width: 100vw;
         margin: 0;
-        padding: 1.2rem 0;
+        padding: 2rem 0;
         border-bottom: 1px solid rgba(255,255,255,0.08);
-        text-align: left;
+        text-align: center;
         float: none !important;
     }
     .nav-menu li:last-child {
         border-bottom: none;
     }
     .nav-menu a {
-        width: 100%;
+        width: 100vw;
         display: block;
         color: #fff;
-        font-size: 1.2rem;
+        font-size: 2rem;
         text-decoration: none;
-        padding-left: 0.5rem;
+        padding: 0;
+        text-align: center;
     }
     .hamburger {
         display: flex;
@@ -105,13 +121,15 @@
         background: #fff;
         margin: 6px 0;
         border-radius: 2px;
-        transition: 0.4s;
-    }
-    .hamburger.active span:nth-child(2) {
-        opacity: 0;
+        transition: transform 0.3s cubic-bezier(0.4,2,0.6,1), opacity 0.2s;
+        position: relative;
     }
     .hamburger.active span:nth-child(1) {
         transform: translateY(10px) rotate(45deg);
+    }
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+        transform: none;
     }
     .hamburger.active span:nth-child(3) {
         transform: translateY(-10px) rotate(-45deg);
