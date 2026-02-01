@@ -6,7 +6,6 @@
     --black: #000000ff;
     --cool-steel-2: #A3B6BCff;
     --accent: #fcb900;
-    --accent-warm: #FF6B5B;
     --deep-navy: #1a2233;
     --soft-silver: #e0e0e0;
     --warm-taupe: #b49e7a;
@@ -672,8 +671,8 @@ footer p {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    position: fixed;
-    top: 0;
+    position: relative;
+    top: auto;
     width: 100%;
     background: transparent;
     z-index: 1000;
@@ -706,7 +705,7 @@ footer p {
     align-items: center;
     box-sizing: border-box;
     color: rgb(255, 255, 255);
-    column-gap: 20px;
+    column-gap: 10px;
     display: flex;
     flex-direction: row;
     font-family: 'Montserrat', sans-serif;
@@ -720,7 +719,7 @@ footer p {
     padding-bottom: 0px;
     padding-inline-start: 0px;
     padding-left: 0px;
-    row-gap: 20px;
+    row-gap: 10px;
     transition-duration: 0.8s;
     width: 534.359375px;
     margin-left: auto;
@@ -729,81 +728,12 @@ footer p {
 
 /* Main - add top padding for fixed nav */
 .main {
-    padding-top: 80px;
-    min-height: calc(100vh - 80px);
+    padding-top: 0;
+    min-height: 100vh;
 }
 
 /* Mobile Navigation */
-@media (max-width: 1024px) {
-    .nav-menu {
-        gap: 1.5rem;
-    }
 
-    .nav-link {
-        font-size: 0.95rem;
-        padding: 0.4rem 0.8rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .hamburger {
-        display: flex;
-    }
-
-    .navbar .container {
-        justify-content: space-between;
-        gap: 0;
-    }
-
-    .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 70px;
-        flex-direction: column;
-        background: rgba(63, 77, 82, 0.98);
-        width: 100%;
-        text-align: center;
-        transition: 0.3s;
-        padding: 2rem 0;
-        gap: 0;
-    }
-
-    .nav-menu.active {
-        left: 0;
-    }
-
-    .nav-menu li {
-        margin: 1rem 0;
-    }
-
-    .hamburger.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active span:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .hamburger.active span:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-}
-
-@media (max-width: 480px) {
-    .navbar {
-        padding: 0.75rem 0;
-    }
-
-    .nav-link {
-        font-size: 0.9rem;
-        padding: 0.4rem 0.6rem;
-    }
-
-    .hamburger span {
-        width: 20px;
-        height: 2.5px;
-    }
-}
 
 /* Sections - add top margin to first section */
 #about {

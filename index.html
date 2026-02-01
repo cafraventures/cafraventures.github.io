@@ -58,7 +58,9 @@
                         soul, and live with clarity, courage, and sacrificial love in their families, parishes, and
                         workplaces.</p>
                     <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/nDI4mq90Fk4?autoplay=1&mute=1" title="Fearless Dallas Preview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/nDI4mq90Fk4" title="Fearless Dallas Preview" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
                     </div>
                 </div>
                 <div class="features">
@@ -204,30 +206,14 @@
         <div class="container" style="display: flex; justify-content: flex-end; align-items: center; position: relative;">
             <p style="position: absolute; left: 50%; transform: translateX(-50%); margin: 0;">&copy; 2026 Fearless Dallas. All rights reserved.</p>
             <div class="footer-social" style="display: flex; flex-direction: column; gap: 1.2rem; align-items: flex-end;">
-                <a href="https://instagram.com" target="_blank" rel="noopener"><img src="logos/instagram.png" alt="Instagram" class="footer-icon"></a>
-                <a href="https://youtube.com" target="_blank" rel="noopener"><img src="logos/youtube.png" alt="YouTube" class="footer-icon"></a>
-                <a href="https://facebook.com" target="_blank" rel="noopener"><img src="logos/facebook.png" alt="Facebook" class="footer-icon"></a>
-                <a href="https://tiktok.com" target="_blank" rel="noopener"><img src="logos/tiktok.png" alt="TikTok" class="footer-icon"></a>
+                <a href="https://www.instagram.com/fearless.brothers" target="_blank" rel="noopener"><img src="logos/instagram.png" alt="Instagram" class="footer-icon"></a>
+                <a href="https://www.youtube.com/@fearless.brothers" target="_blank" rel="noopener"><img src="logos/youtube.png" alt="YouTube" class="footer-icon"></a>
+                <a href="https://www.tiktok.com/@fearless.brothers_" target="_blank" rel="noopener"><img src="logos/tiktok.png" alt="TikTok" class="footer-icon"></a>
             </div>
         </div>
     </footer>
 
     <script>
-        // Mobile menu toggle
-        const hamburger = document.querySelector('.hamburger');
-        const navMenu = document.querySelector('.nav-menu');
-
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        });
-
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
-        }));
-
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -244,7 +230,6 @@
 
         // Back to top button functionality
         const backToTopButton = document.getElementById('backToTop');
-        
         window.addEventListener('scroll', () => {
             if (window.scrollY > 300) {
                 backToTopButton.classList.add('show');
@@ -252,54 +237,12 @@
                 backToTopButton.classList.remove('show');
             }
         });
-
         backToTopButton.addEventListener('click', () => {
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
             });
         });
-
-        // Disable right-click context menu
-        // document.addEventListener('contextmenu', function(e) {
-        //     e.preventDefault();
-        // });
-
-        // Auto-hide navbar and logo on scroll down, show on scroll up
-        let lastScrollTop = 0;
-        const navbar = document.querySelector('.navbar');
-        const logo = document.getElementById('fearless_logo');
-
-        function hideElement(el) {
-            if (el) {
-                el.style.opacity = '0';
-                el.style.pointerEvents = 'none';
-                el.style.visibility = 'hidden';
-            }
-        }
-        function showElement(el) {
-            if (el) {
-                el.style.opacity = '1';
-                el.style.pointerEvents = 'auto';
-                el.style.visibility = 'visible';
-            }
-        }
-
-        window.addEventListener('scroll', function() {
-            let st = window.pageYOffset || document.documentElement.scrollTop;
-            if (st > lastScrollTop && st > 80) {
-                // Scrolling down
-                navbar.style.transform = 'translateY(-100%)';
-                hideElement(logo);
-                hideElement(navMenu);
-            } else {
-                // Scrolling up
-                navbar.style.transform = 'translateY(0)';
-                showElement(logo);
-                showElement(navMenu);
-            }
-            lastScrollTop = st <= 0 ? 0 : st;
-        }, false);
     </script>
 </body>
 
