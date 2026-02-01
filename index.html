@@ -201,8 +201,14 @@
 
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <p>&copy; 2026 Fearless Dallas. All rights reserved.</p>
+        <div class="container" style="display: flex; justify-content: flex-end; align-items: center; position: relative;">
+            <p style="position: absolute; left: 50%; transform: translateX(-50%); margin: 0;">&copy; 2026 Fearless Dallas. All rights reserved.</p>
+            <div class="footer-social" style="display: flex; flex-direction: column; gap: 1.2rem; align-items: flex-end;">
+                <a href="https://instagram.com" target="_blank" rel="noopener"><img src="logos/instagram.png" alt="Instagram" class="footer-icon"></a>
+                <a href="https://youtube.com" target="_blank" rel="noopener"><img src="logos/youtube.png" alt="YouTube" class="footer-icon"></a>
+                <a href="https://facebook.com" target="_blank" rel="noopener"><img src="logos/facebook.png" alt="Facebook" class="footer-icon"></a>
+                <a href="https://tiktok.com" target="_blank" rel="noopener"><img src="logos/tiktok.png" alt="TikTok" class="footer-icon"></a>
+            </div>
         </div>
     </footer>
 
@@ -258,6 +264,42 @@
         // document.addEventListener('contextmenu', function(e) {
         //     e.preventDefault();
         // });
+
+        // Auto-hide navbar and logo on scroll down, show on scroll up
+        let lastScrollTop = 0;
+        const navbar = document.querySelector('.navbar');
+        const logo = document.getElementById('fearless_logo');
+
+        function hideElement(el) {
+            if (el) {
+                el.style.opacity = '0';
+                el.style.pointerEvents = 'none';
+                el.style.visibility = 'hidden';
+            }
+        }
+        function showElement(el) {
+            if (el) {
+                el.style.opacity = '1';
+                el.style.pointerEvents = 'auto';
+                el.style.visibility = 'visible';
+            }
+        }
+
+        window.addEventListener('scroll', function() {
+            let st = window.pageYOffset || document.documentElement.scrollTop;
+            if (st > lastScrollTop && st > 80) {
+                // Scrolling down
+                navbar.style.transform = 'translateY(-100%)';
+                hideElement(logo);
+                hideElement(navMenu);
+            } else {
+                // Scrolling up
+                navbar.style.transform = 'translateY(0)';
+                showElement(logo);
+                showElement(navMenu);
+            }
+            lastScrollTop = st <= 0 ? 0 : st;
+        }, false);
     </script>
 </body>
 

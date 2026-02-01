@@ -817,8 +817,9 @@ footer p {
     right: 30px;
     width: 50px;
     height: 50px;
-    background: linear-gradient(135deg, var(--blue-slate) 0%, #0066cc 100%);
-    color: white;
+    background-color: var(--cool-steel-2);
+    border: 1px solid var(--cool-steel-2);
+    color: #000;
     border: none;
     border-radius: 50%;
     font-size: 1.5rem;
@@ -843,7 +844,10 @@ footer p {
 
 .back-to-top:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(71, 116, 134, 0.4);
+    /* box-shadow: 0 15px 40px rgba(71, 116, 134, 0.4); */
+    background-color: var(--deep-navy);
+    color: #fff;
+    border-color: #fff;
 }
 
 /* Responsive back to top button */
@@ -860,6 +864,9 @@ footer p {
 /* Make logo image white */
 .logo-img {
     filter: brightness(0) invert(1);
+    width: 50%;
+    height: auto;
+    max-width: 120px;
 }
 
 .nav-link {
@@ -898,4 +905,16 @@ footer p {
     line-height: 1;
     vertical-align: baseline;
     display: inline;
+}
+
+.footer-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    filter: grayscale(0.2) brightness(0.95);
+    transition: filter 0.2s, transform 0.2s;
+}
+.footer-icon:hover {
+    filter: none;
+    transform: scale(1.12);
 }
