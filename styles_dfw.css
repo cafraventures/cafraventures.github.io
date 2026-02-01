@@ -1,3 +1,12 @@
+html, body {
+    background: linear-gradient(135deg, var(--deep-navy) 0%, var(--soft-silver) 100%) !important;
+    min-height: 100vh !important;
+    width: 100vw !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
 /* Better responsive background images for sections */
 @media (max-width: 1024px) {
     #about,
