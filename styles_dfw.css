@@ -1,3 +1,26 @@
+/* Responsive background images for sections */
+@media (max-width: 1024px) {
+    #about,
+    .retreat-section,
+    .register-section,
+    .contact-section {
+        background-size: cover !important;
+        background-position: center center !important;
+        background-attachment: scroll !important;
+    }
+}
+
+@media (max-width: 768px) {
+    #about,
+    .retreat-section,
+    .register-section,
+    .contact-section {
+        background-size: cover !important;
+        background-position: center center !important;
+        background-attachment: scroll !important;
+        min-height: 0 !important;
+    }
+}
 @media (max-width: 1024px) {
     .back-to-top {
         position: fixed !important;
