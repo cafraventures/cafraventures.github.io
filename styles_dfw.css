@@ -148,24 +148,50 @@
         height: 4px;
         width: 30px;
         background: #fff;
-        margin: 6px 0;
         border-radius: 2px;
         transition: transform 0.3s cubic-bezier(0.4,2,0.6,1), opacity 0.2s;
-        position: relative;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        transform-origin: center;
+    }
+    .hamburger {
+        /* ...existing code... */
+        position: fixed;
+        top: 24px;
+        right: 40px;
+        z-index: 10000 !important;
+        background: none !important;
+        box-shadow: none !important;
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .hamburger span:nth-child(1) {
+        top: 8px;
+    }
+    .hamburger span:nth-child(2) {
+        top: 20px;
+    }
+    .hamburger span:nth-child(3) {
+        top: 32px;
     }
     .hamburger.active span:nth-child(1) {
-        transform: translateY(10px) rotate(45deg);
+        transform: translateY(12px) rotate(45deg);
     }
     .hamburger.active span:nth-child(2) {
         opacity: 0;
         transform: none;
     }
     .hamburger.active span:nth-child(3) {
-        transform: translateY(-10px) rotate(-45deg);
+        transform: translateY(-12px) rotate(-45deg);
     }
     .navbar {
         background: #000;
-        box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+        box-shadow: none !important;
     }
 }
 /* CSS Color Variables */
