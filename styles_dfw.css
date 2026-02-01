@@ -1,3 +1,28 @@
+/* Better responsive background images for sections */
+@media (max-width: 1024px) {
+    #about,
+    .retreat-section,
+    .register-section,
+    .contact-section {
+        background-size: contain !important;
+        background-repeat: no-repeat !important;
+        background-position: top center !important;
+        background-attachment: scroll !important;
+    }
+}
+
+@media (max-width: 768px) {
+    #about,
+    .retreat-section,
+    .register-section,
+    .contact-section {
+        background-size: contain !important;
+        background-repeat: no-repeat !important;
+        background-position: top center !important;
+        background-attachment: scroll !important;
+        min-height: 0 !important;
+    }
+}
 /* Responsive background images for sections */
 @media (max-width: 1024px) {
     #about,
