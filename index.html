@@ -24,11 +24,6 @@
                 <li><a href="#faq" class="nav-link">FAQ</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
         </div>
     </nav>
 
@@ -212,40 +207,6 @@
     </footer>
 
     <script>
-                // Hamburger menu for mobile
-                const hamburger = document.querySelector('.hamburger');
-                const navMenu = document.querySelector('.nav-menu');
-                let lastScrollY = window.scrollY;
-
-                function toggleMenu() {
-                    hamburger.classList.toggle('active');
-                    navMenu.classList.toggle('active');
-                }
-                if (hamburger) {
-                    hamburger.addEventListener('click', toggleMenu);
-                }
-
-                // Auto-hide nav menu on scroll (mobile only)
-                window.addEventListener('scroll', function() {
-                    if (window.innerWidth <= 900) {
-                        if (window.scrollY > lastScrollY && navMenu.classList.contains('active')) {
-                            // Scrolling down, hide menu
-                            navMenu.classList.remove('active');
-                            hamburger.classList.remove('active');
-                        }
-                        lastScrollY = window.scrollY;
-                    }
-                });
-
-                // Close menu when clicking a nav link (mobile)
-                document.querySelectorAll('.nav-link').forEach(link => {
-                    link.addEventListener('click', () => {
-                        if (window.innerWidth <= 900) {
-                            hamburger.classList.remove('active');
-                            navMenu.classList.remove('active');
-                        }
-                    });
-                });
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
