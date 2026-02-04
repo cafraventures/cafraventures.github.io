@@ -272,6 +272,10 @@
                 behavior: 'smooth'
             });
         });
+        // Disable right-click context menu on the page
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
     </script>
 </body>
 
