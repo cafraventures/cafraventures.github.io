@@ -1,0 +1,103 @@
+{
+    "nav": {
+        "about": "Porqué",
+        "retreat": "Retiro",
+        "testimonials": "Testimonios",
+        "join": "Unirse",
+        "faq": "Preguntas frecuentes",
+        "contact": "Contacto"
+    },
+    "main": {
+        "title": "2026 Fearless Dallas",
+        "subtitle": "Masculinidad con Propósito",
+        "description": "Un movimiento católico de hombres en Dallas que llama a los hombres de regreso a una hombría heroica, sacrificial y <strong>auténtica</strong>.",
+        "register": "Registrarse para Fearless 2026"
+    },
+    "about": {
+        "title": "¿Por qué Fearless Masculinity en Dallas?",
+        "p1": "Estamos viviendo una crisis silenciosa: hombres que se sienten desconectados de su propósito, inseguros de su identidad y agotados por la presión de rendir.",
+        "p2": "Fearless Masculinity existe para ayudar a los hombres a recuperar su verdadera identidad en Cristo, sanar el alma masculina y vivir con claridad, coraje y amor sacrificial en sus familias, parroquias y lugares de trabajo.",
+        "features": [
+            {
+                "title": "Retiros de hombres",
+                "desc": "Enraizados en la espiritualidad católica y los Sacramentos."
+            },
+            {
+                "title": "Hermandad",
+                "desc": "Pequeños grupos y formación continua en DFW."
+            },
+            {
+                "title": "Herramientas prácticas",
+                "desc": "Para sanación interior, oración, liderazgo y dominio propio."
+            }
+        ]
+    },
+    "retreat": {
+        "title": "2026 Fearless Masculinity - Dallas",
+        "subtitle": "Un fin de semana inmersivo para responder al llamado de lo salvaje y sanar el alma masculina.",
+        "when": "Cuándo",
+        "whenDesc": "Viernes 1 de mayo (llegar antes de las 2:30 pm) - Domingo 3 de mayo (termina alrededor de las 4:00 pm)",
+        "where": "Dónde",
+        "whereDesc": "The Pines Catholic Camp<br>300 White Pine Rd, Big Sandy, TX 75755",
+        "cost": "Costo",
+        "costDesc": "$255 Preventa | $295 Regular",
+        "expect": "Qué esperar",
+        "expectList": [
+            "Charlas poderosas sobre identidad, paternidad y guerra espiritual",
+            "Oración guiada, Adoración, Confesión y Misa",
+            "Actividades al aire libre que despiertan el espíritu guerrero",
+            "Pequeños grupos y hermandad honesta"
+        ],
+        "saveSpot": "Apartar mi lugar"
+    },
+    "testimonials": {
+        "title": "Lo que dicen los hombres",
+        "quotes": [
+            "Fearless cambió mi vida por completo. Fue la mezcla perfecta de fraternidad, terapia y el amor de Dios... Este retiro me mostró el amor de Cristo de una manera real y tangible que me ha cambiado en cada célula de mi ser. Nunca seré el mismo.",
+            "Honestamente tengo una energía renovada para correr tras Dios. Anhelarlo y amarlo. Veo áreas donde he sido herido pero veo donde el Señor me está liberando. Veo libertad y verdad.",
+            "Esto es exactamente lo que buscaba. Una comunidad de hermanos que desea grandeza en sus vidas y caminar hacia Cristo. Quería una comunidad que me empuje fuera de mi zona de confort y ser valiente en esta lucha con Cristo contra el mundo."
+        ]
+    },
+    "register": {
+        "title": "Regístrate ahora",
+        "desc": "El pago seguro se procesa a través de Acceptiva. Puedes reservar tu lugar con un depósito o pagar el total.",
+        "deposit": "Depósito",
+        "depositDesc": "Reserva tu lugar; paga el resto después.",
+        "full": "Registro completo",
+        "fullDesc": "Registro al retiro Fearless Masculinity.",
+        "registerNow": "Regístrate ahora"
+    },
+    "faq": {
+        "title": "Preguntas frecuentes",
+        "items": [
+            {
+                "q": "¿Para quién es este retiro?",
+                "a": "Hombres de 18 a 99 años que tienen hambre de encontrar su verdadero corazón masculino."
+            },
+            {
+                "q": "¿Debo ser católico?",
+                "a": "Fearless Masculinity está enraizado en la fe católica, pero hombres de otras denominaciones cristianas que estén abiertos a la oración y Sacramentos católicos son bienvenidos."
+            },
+            {
+                "q": "¿Es un retiro activo?",
+                "a": "Respuesta corta: sí. Todo hombre necesita una aventura que vivir, ¡así que estaremos en movimiento!"
+            },
+            {
+                "q": "¿Qué debo llevar?",
+                "a": "Biblia, diario, artículos de aseo, ropa cómoda, capas, zapatos cerrados y cualquier cosa necesaria para actividades al aire libre. Enviaremos una lista por correo."
+            },
+            {
+                "q": "¿Este evento es bilingüe?",
+                "a": "Solo es en inglés."
+            }
+        ]
+    },
+    "contact": {
+        "title": "Contáctanos",
+        "desc": "Si tienes preguntas sobre el retiro o la logística, por favor escríbenos a:",
+        "email": "fearlessrcdallas@gmail.com"
+    },
+    "footer": {
+        "copyright": "&copy; 2026 Fearless Masculinity - Dallas, TX. Todos los derechos reservados."
+    }
+}

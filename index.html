@@ -14,7 +14,11 @@
 <body>
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="container" style="position:relative;">
+            <div class="container" style="position:relative;">
+                <div style="position:absolute; top:10px; left:10px; z-index:1000; display:flex; gap:8px;">
+                    <img id="flag-en" src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="English" title="English" style="width:32px; height:22px; cursor:pointer; border:1px solid #ccc; border-radius:3px;">
+                    <img id="flag-es" src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Spain.svg" alt="Español" title="Español" style="width:32px; height:22px; cursor:pointer; border:1px solid #ccc; border-radius:3px;">
+                </div>
             <!-- Hamburger icon for mobile/tablet -->
             <div class="hamburger" id="hamburger" aria-label="Open navigation" tabindex="0">
                 <span></span>
@@ -36,7 +40,7 @@
     <!-- Main Section -->
     <header class="main">
         <div class="main-content">
-            <h1>2026 Fearless - Dallas</h1>
+            <h1>2026 Fearless Dallas</h1>
             <h2>Masculinity with Purpose</h2>
             <p>A Catholic men's movement in Dallas calling men back to heroic, sacrificial, <strong>authentic</strong>
                 manhood.</p>
@@ -186,6 +190,12 @@
                     Bible, journal, toiletries, comfortable clothes, layers, closed-toe shoes, and anything needed for outdoor activities. We'll email a packing list.
                 </div>
             </div>
+            <div class="faq-item">
+                <button class="faq-question">Is this event bilingual?</button>
+                <div class="faq-answer" style="display:none;">
+                    It's only in English.
+                </div>
+            </div>
         </div>
         <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -228,6 +238,7 @@
         </div>
     </footer>
 
+    <script src="lang.js"></script>
     <script>
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
