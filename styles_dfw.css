@@ -1,3 +1,31 @@
+@media (max-width: 1024px) {
+    .nav-menu {
+        background: #000 !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+    }
+}
+@media (max-width: 600px) {
+    footer .container {
+        flex-direction: column;
+        align-items: flex-end;
+        min-height: 120px;
+    }
+    footer p {
+        position: static !important;
+        left: auto !important;
+        transform: none !important;
+        text-align: left;
+        margin-bottom: 0.5rem;
+        margin-left: 0;
+        margin-right: auto;
+        width: 100%;
+    }
+}
+/* Center contact section paragraph */
+.contact-section p {
+    text-align: center;
+}
 /* Ensure nav logo matches nav link size */
 .nav-menu img {
     height: 32px;
@@ -255,7 +283,7 @@ a:hover, a:focus {
     --black: #000000ff;
     --cool-steel-2: #A3B6BCff;
     --accent: #fcb900;
-    --deep-navy: #1a2233;
+    --deep-navy: #133551;
     --soft-silver: #e0e0e0;
     --soft-silver-2: #ececec;
 }
@@ -524,11 +552,8 @@ p {
 }
 
 .feature {
-    /* background: linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%); */
-    padding: 2rem;
-    /* box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15), 0 0 20px rgba(0, 212, 255, 0.1); */
+    padding: 1.1rem 1.5rem;
     border-radius: 12px;
-    /* transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); */
     position: relative;
     backdrop-filter: blur(10px);
     border: 1px solid var(--deep-navy);
@@ -544,7 +569,7 @@ p {
     height: 100%;
     background: var(--deep-navy);
 }
-    /* No animation or blue shadow on hover */
+
 .feature:hover {
     box-shadow: 0 25px 70px rgba(71, 116, 134, 0.25), 0 0 40px rgba(0, 212, 255, 0.2);
     background: inherit;
@@ -590,7 +615,7 @@ p {
 
 .detail-card {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%);
-    padding: 2.5rem 2rem;
+    padding: 1.1rem 1.5rem;
     text-align: center;
     border-radius: 12px;
     box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15), 0 0 20px rgba(0, 212, 255, 0.1);
@@ -651,7 +676,7 @@ p {
 
 .testimonial {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%);
-    padding: 2.5rem;
+    padding: 1.1rem 1.5rem;
     border-radius: 12px;
     box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15), 0 0 20px rgba(0, 212, 255, 0.1);
     font-style: italic;
@@ -725,6 +750,8 @@ p {
     background-attachment: fixed;
     color: white;
     position: relative;
+    padding-top: 13rem;
+    padding-bottom: 5rem;
 }
 
 .contact-section .container {
@@ -795,7 +822,7 @@ p {
 
 /* Footer */
 footer {
-    background: var(--black);
+    background: #16171A;
     padding: 2rem 0;
     text-align: center;
 }
