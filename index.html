@@ -162,39 +162,51 @@
         <div class="container">
             <h2>Frequently Asked Questions</h2>
             <div class="faq-item">
-                <h3>Do I have to be Catholic?</h3>
-                <p>Fearless Dallas is rooted in the Catholic faith, but men from other Christian backgrounds who are
-                    open to Catholic prayer and Sacraments are welcome.</p>
+                <button class="faq-question">Who is this retreat for?</button>
+                <div class="faq-answer" style="display:none;">
+                    Men from 18 to 99 who are hungry to meet their true masculine hearts.
+                </div>
             </div>
             <div class="faq-item">
-                <h3>What should I bring?</h3>
-                <p>Bible, journal, toiletries, comfortable clothes, layers, closed-toe shoes, and anything needed for
-                    outdoor activities. We'll email a packing list.</p>
+                <button class="faq-question">Do I have to be Catholic?</button>
+                <div class="faq-answer" style="display:none;">
+                    Fearless Dallas is rooted in the Catholic faith, but men from other Christian backgrounds who are open to Catholic prayer and Sacraments are welcome.
+                </div>
             </div>
             <div class="faq-item">
-                <h3>Is there financial help?</h3>
-                <p>If cost is an issue, contact us. We do not want money to be the reason a man misses this retreat.</p>
+                <button class="faq-question">Is this an active retreat?</button>
+                <div class="faq-answer" style="display:none;">
+                    Short answer: yes. Every man needs an adventure to live, so we will be on our feet!
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">What should I bring?</button>
+                <div class="faq-answer" style="display:none;">
+                    Bible, journal, toiletries, comfortable clothes, layers, closed-toe shoes, and anything needed for outdoor activities. We'll email a packing list.
+                </div>
             </div>
         </div>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.faq-question').forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    var answer = btn.nextElementSibling;
+                    var isVisible = answer.style.display === 'block';
+                    answer.style.display = isVisible ? 'none' : 'block';
+                });
+            });
+        });
+        </script>
     </section>
 
     <!-- Contact -->
     <section id="contact" class="section contact-section">
-        <div class="container">
-            <h2>Talk with Our Team</h2>
-            <p>If you're on the fence or have questions about the retreat, logistics, or scholarships, reach out. We
-                would <strong>love</strong> to hear from you.</p>
-            <div class="contact-grid">
-                <a href="saj-babu.vcf" download class="contact-card">
-                    <h3>Saj Babu</h3>
-                    <p>+1 (972) 740-7559<br>sajanbabu85@gmail.com</p>
-                </a>
-                <a href="quinn-bowen.vcf" download class="contact-card">
-                    <h3>Quinn Bowen</h3>
-                    <p>+1 (817) 718-6906<br>qbowen29@gmail.com</p>
-                </a>
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>If you have questions about the retreat or logistics, please email us at:<br>
+                    <a href="mailto:fearlessrcdallas@gmail.com" class="contact-card"><strong>fearlessrcdallas@gmail.com</strong></a>
+                </p>
             </div>
-        </div>
     </section>
 
     <!-- Back to Top Button -->
@@ -273,9 +285,9 @@
             });
         });
         // Disable right-click context menu on the page
-        document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-        });
+        // document.addEventListener('contextmenu', function(e) {
+        //     e.preventDefault();
+        // });
     </script>
 </body>
 
