@@ -192,8 +192,8 @@
 
 @media (max-width: 600px) {
     .fearless-header-logo {
-        top: 38px;
-        left: 4px;
+        top: 10px;
+        left: -40px;
         width: 120px;
     }
     .main-content {
