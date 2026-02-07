@@ -166,11 +166,6 @@
     .nav-menu li {
         margin: 0.7rem 0;
     }
-    .fearless-header-logo {
-        top: 44px;
-        left: 10px;
-        width: 180px;
-    }
     .main {
         min-height: 60vh;
         padding-top: 4.5em;
@@ -191,11 +186,6 @@
 }
 
 @media (max-width: 600px) {
-    .fearless-header-logo {
-        top: 10px;
-        left: -40px;
-        width: 120px;
-    }
     .main-content {
         padding: 1rem;
     }
@@ -216,8 +206,8 @@
 /* Fearless Header Logo */
 .fearless-header-logo {
     position: absolute;
-    top: 60px;
-    left: 30px;
+    top: 10px;
+    left: -40px;
     z-index: 100;
     width: 260px;
     height: auto;
@@ -610,6 +600,23 @@ body {
     gap: 2rem;
 }
 
+@media (max-width: 600px) {
+    .content-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .features {
+        order: 2;
+        width: 100%;
+        margin-top: 1.5rem;
+    }
+    .text-column {
+        order: 1;
+        width: 100%;
+    }
+}
+
 .feature {
     padding: 1.1rem 1.5rem;
     border-radius: 12px;
@@ -648,6 +655,19 @@ body {
         justify-content: center;
         align-items: stretch;
         margin-top: 2rem;
+}
+
+@media (max-width: 600px) {
+    .retreat-details {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 1.5rem;
+        align-items: stretch;
+    }
+    .detail-card {
+        max-width: 100%;
+        width: 100%;
+    }
 }
 
 .detail-card {
