@@ -29,6 +29,7 @@
         justify-content: flex-end;
         position: relative;
         padding: 0;
+        overflow: visible; /* Ensure children are not clipped */
     }
     .nav-menu {
         display: none !important;
@@ -101,17 +102,20 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 36px;
+        width: 36px; /* Normal size */
         height: 36px;
         cursor: pointer;
-        z-index: 5000; /* Increased to ensure hamburger is always on top */
+        z-index: 5000;
         position: absolute;
-        right: 38px;
-        top: 0.5em;
+        right: 16px; /* Reasonable distance from right edge */
+        top: -0.5em;
+        overflow: visible;
+        margin-right: 0;
+        padding-right: 0;
     }
     .hamburger span {
         display: block;
-        width: 28px;
+        width: 28px; /* Normal size */
         height: 4px;
         margin: 4px 0;
         background: #fff;
@@ -121,13 +125,13 @@
     }
 
     .hamburger.active span:nth-child(1) {
-        transform: rotate(45deg) translate(6px, 6px);
+        transform: translateY(8px) rotate(45deg);
     }
     .hamburger.active span:nth-child(2) {
         opacity: 0;
     }
     .hamburger.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(6px, -6px);
+        transform: translateY(-8px) rotate(-45deg);
     }
     .nav-menu {
         position: absolute;
