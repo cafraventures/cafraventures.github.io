@@ -1,13 +1,4 @@
-/* CSS Color Variables */
-:root {
-    --black: #000000ff;
-    --cool-steel-2: #A3B6BCff;
-    --accent: #fcb900;
-    --deep-navy: #133551;
-    --soft-silver: #e0e0e0;
-    --soft-silver-2: #ececec;
-}
-
+/* ============================= */
 /* Responsive Styles */
 @media (max-width: 1024px) {
         .nav-menu.active .nav-link:hover,
@@ -225,6 +216,16 @@
     width: 100%;
     height: auto;
     display: block;
+}
+
+/* CSS Color Variables */
+:root {
+    --black: #000000ff;
+    --cool-steel-2: #A3B6BCff;
+    --accent: #fcb900;
+    --deep-navy: #133551;
+    --soft-silver: #e0e0e0;
+    --soft-silver-2: #ececec;
 }
 
 /* Sliding Banner Styles */
