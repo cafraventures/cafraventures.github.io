@@ -186,6 +186,22 @@
     .hamburger {
         display: flex;
     }
+
+    .main {
+        background-position: center center !important;
+        background-size: cover !important;
+        background-attachment: scroll !important;
+    }
+    .retreat-section {
+        background-position: center center !important;
+        background-size: cover !important;
+        background-attachment: scroll !important;
+    }
+    #about {
+        background-position: center center !important;
+        background-size: cover !important;
+        background-attachment: scroll !important;
+    }
 }
 
 @media (max-width: 600px) {
@@ -204,6 +220,22 @@
     .cta-button {
         font-size: 1rem;
         padding: 8px 10px;
+    }
+
+    .main {
+        background-position: center center !important;
+        background-size: cover !important;
+        background-attachment: scroll !important;
+    }
+    .retreat-section {
+        background-position: center center !important;
+        background-size: cover !important;
+        background-attachment: scroll !important;
+    }
+    #about {
+        background-position: center center !important;
+        background-size: cover !important;
+        background-attachment: scroll !important;
     }
 }
 /* Fearless Header Logo */
