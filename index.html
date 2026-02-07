@@ -46,6 +46,12 @@
             </ul>
         </div>
     </nav>
+    <!-- Fearless Header Logo -->
+    <div class="fearless-header-logo">
+        <a href="https://fearlessmasculinity.com" target="_blank" rel="noopener">
+            <img src="logos/fearlessheader.png" alt="Fearless Header Logo" />
+        </a>
+    </div>
 
     <!-- Main Section -->
     <header class="main">
@@ -180,6 +186,34 @@
                 Now</a>
         </div>
         <script>
+                // Desktop navbar auto-hide on scroll
+                let lastScrollYDesktop = window.scrollY;
+                let tickingDesktop = false;
+                const navbar = document.querySelector('.navbar');
+                function handleDesktopNavScroll() {
+                    if (window.innerWidth > 1024 && navbar) {
+                        if (window.scrollY > lastScrollYDesktop) {
+                            navbar.style.transform = 'translateY(-100%)';
+                        } else {
+                            navbar.style.transform = 'translateY(0)';
+                        }
+                        lastScrollYDesktop = window.scrollY;
+                    } else if (navbar) {
+                        navbar.style.transform = 'translateY(0)';
+                    }
+                    tickingDesktop = false;
+                }
+                window.addEventListener('scroll', function() {
+                    if (!tickingDesktop) {
+                        window.requestAnimationFrame(handleDesktopNavScroll);
+                        tickingDesktop = true;
+                    }
+                });
+                window.addEventListener('resize', function() {
+                    if (window.innerWidth <= 1024 && navbar) {
+                        navbar.style.transform = 'translateY(0)';
+                    }
+                });
         document.addEventListener('DOMContentLoaded', function() {
             document.querySelectorAll('.faq-question').forEach(function(btn) {
                 btn.addEventListener('click', function() {
@@ -251,6 +285,15 @@
                     navMenu.classList.remove('active');
                     hamburger.classList.remove('active');
                 });
+            });
+            // Auto-hide nav menu on scroll ONLY for desktop
+            let lastScrollY = window.scrollY;
+            window.addEventListener('scroll', function() {
+                if (window.innerWidth > 1024 && navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                    hamburger.classList.remove('active');
+                }
+                lastScrollY = window.scrollY;
             });
         }
     </script>
