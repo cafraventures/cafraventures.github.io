@@ -1,3 +1,214 @@
+/* ============================= */
+/* Responsive Styles */
+@media (max-width: 1024px) {
+        .nav-menu.active .nav-link:hover,
+        .nav-menu.active .nav-link:focus {
+            color: #fcb900 !important;
+            background: #111 !important;
+            transition: color 0.2s, background 0.2s;
+        }
+    .navbar {
+        display: flex !important;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        background: transparent;
+        position: fixed;
+        width: 100%;
+        top: 2.7em;
+        left: 0;
+        right: 0;
+        z-index: 4000;
+        padding: 0.5rem 0;
+    }
+    .navbar .container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        position: relative;
+        padding: 0;
+    }
+    .nav-menu {
+        display: none !important;
+    }
+    .nav-menu.active {
+        display: flex !important;
+        position: absolute;
+        top: calc(100% + 56px);
+        left: 0;
+        right: 0;
+        background: #000;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100vw;
+        height: auto;
+        padding: 0.5rem 0 0.5rem 0;
+        border-radius: 0 0 16px 16px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        z-index: 4001;
+        animation: slideDownMenu 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        border: 1.5px solid #222;
+        border-top: none;
+        overflow-y: auto;
+    }
+    .nav-menu.active li {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border-bottom: 1px solid #222;
+        list-style: none;
+    }
+    .nav-menu.active li:last-child {
+        border-bottom: none;
+    }
+    .nav-menu.active .nav-link {
+        color: #fff !important;
+        background: transparent !important;
+        width: 100%;
+        border-radius: 0;
+        padding: 1.1rem 2rem;
+        margin: 0;
+        font-size: 1.1rem;
+        text-align: left;
+        box-shadow: none;
+        display: block;
+        transition: color 0.2s, background 0.2s;
+    }
+    .nav-menu.active .nav-link {
+        background: #000 !important;
+        color: #fff !important;
+        width: 100%;
+        border-radius: 8px;
+        padding: 0.8rem 1.5rem;
+        margin: 0.2rem 0;
+        font-size: 1.1rem;
+        text-align: left;
+    }
+    .hamburger {
+        display: flex !important;
+    }
+    .container {
+        padding: 0 10px;
+    }
+    .navbar {
+        padding: 0.5rem 0;
+        top: 2.7em;
+    }
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 36px;
+        height: 36px;
+        cursor: pointer;
+        z-index: 2600;
+        position: absolute;
+        right: 38px;
+        top: 0.5em;
+    }
+    .hamburger span {
+        display: block;
+        width: 28px;
+        height: 4px;
+        margin: 4px 0;
+        background: #fff;
+        border-radius: 2px;
+        transition: all 0.3s;
+        position: relative;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(19, 53, 81, 0.98);
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100vw;
+        padding: 1.2rem 0 1.2rem 2rem;
+        border-radius: 0 0 12px 12px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        display: none;
+        z-index: 3500;
+        animation: slideDownMenu 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .nav-menu.active {
+        display: flex;
+        animation: slideDownMenu 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    @keyframes slideDownMenu {
+        0% {
+            opacity: 0;
+            transform: translateY(-40px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .nav-menu li {
+        margin: 0.7rem 0;
+    }
+    .fearless-header-logo {
+        top: 44px;
+        left: 10px;
+        width: 180px;
+    }
+    .main {
+        min-height: 60vh;
+        padding-top: 4.5em;
+    }
+    .content-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+/* Hide hamburger on desktop */
+.hamburger {
+    display: none;
+}
+@media (max-width: 1024px) {
+    .hamburger {
+        display: flex;
+    }
+}
+
+@media (max-width: 600px) {
+    .fearless-header-logo {
+        top: 38px;
+        left: 4px;
+        width: 120px;
+    }
+    .main-content {
+        padding: 1rem;
+    }
+    .section {
+        padding: 2.5rem 0;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.2rem;
+    }
+    .cta-button {
+        font-size: 1rem;
+        padding: 8px 10px;
+    }
+}
 /* Fearless Header Logo */
 .fearless-header-logo {
     position: absolute;
@@ -428,12 +639,12 @@ body {
 
 /* Retreat Details Flex Layout */
 .retreat-details {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 2rem;
-    justify-content: center;
-    align-items: stretch;
-    margin-top: 2rem;
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 2rem;
+        justify-content: center;
+        align-items: stretch;
+        margin-top: 2rem;
 }
 
 .detail-card {
